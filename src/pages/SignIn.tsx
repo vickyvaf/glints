@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { LoaderSpinner } from "../components/utils/Loader";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { LoaderSpinner } from "../components/utils/Loader";
 
 const SignIn = () => {
-  const loginApi = process.env["REACT_APP_LOGIN"];
-
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ const SignIn = () => {
 
     try {
       axios
-        .post(`${loginApi}`, {
+        .post("https://jsonplaceholder.typicode.com", {
           email: email,
           password: password,
         })
@@ -30,7 +28,7 @@ const SignIn = () => {
           setEmail("");
           setPassword("");
           navigate("/dashboard");
-          Cookies.set("token", token);
+          Cookies.set("token", token)
         })
         // .catch((err) => console.log("err: ", err))
         .finally(() => setDisableButton(false));
@@ -44,6 +42,7 @@ const SignIn = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Sign In</title>
+        <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="w-full h-screen bg-[#F2F8FA] pt-20 px-5 font-poppins">
         <div className="max-w-lg mx-auto mt-20">

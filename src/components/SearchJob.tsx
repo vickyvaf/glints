@@ -1,11 +1,7 @@
-const SearchHome = () => {
+const SearchJob = () => {
   return (
-    <div className="pt-20 bg-[#FFF240] w-full px-5 font-poppins">
-      <div className="w-full space-y-7 py-10">
-        <h1 className="text-center font-medium text-xl">
-          Jelajahi <span className="font-bold">5000+</span> pekerjaan baru
-          setiap bulan!
-        </h1>
+    <div className="bg-white w-full font-poppins">
+      <div className="w-full space-y-7 pt-10 pb-5">
         <div className="flex justify-center gap-x-5">
           <div className="w-full lg:w-5/12 rounded-lg outline-none bg-[#EBF5FA] focus:bg-[#C2E0EE] flex items-center relative overflow-hidden">
             <svg
@@ -58,4 +54,4 @@ const SearchHome = () => {
   );
 };
 
-export default SearchHome;
+export default SearchJob;

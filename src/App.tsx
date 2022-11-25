@@ -1,6 +1,4 @@
-import axios from "axios";
 import Cookies from "js-cookie";
-import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HeaderLayout from "./layouts/HeaderLayout";
 import Dashboard from "./pages/Dashboard";
@@ -18,15 +16,6 @@ const App = () => {
       return <Navigate to={"/"} />;
     }
   };
-
-  useEffect(() => {
-    const baseUrl = process.env['REACT_APP_BASEURL']
-    const fetchData = async () => {
-      const result = await axios.get(`${baseUrl}`)
-      console.log("result: ", result)
-    }
-    // fetchData()
-  }, [])
 
   return (
     <BrowserRouter>

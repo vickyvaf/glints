@@ -5,8 +5,6 @@ import { LoaderSpinner } from "../components/utils/Loader";
 import axios from "axios";
 
 const SignUp = () => {
-  const registerApi = process.env["REACT_APP_REGISTER"];
-
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -21,14 +19,13 @@ const SignUp = () => {
 
     try {
       axios
-        .post(`${registerApi}`, {
+        .post("https://jsonplaceholder.typicode.com", {
           name: name,
           email: email,
           password: password,
           image_url: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
         })
         .then((res) => {
-          // console.log("res: ", res);
           navigate("/auth/signin");
           setName("");
           setEmail("");
@@ -46,6 +43,7 @@ const SignUp = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Sign Up</title>
+        <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="w-full md:h-screen bg-[#F2F8FA] pt-20 pb-20  px-5 md:px-0 font-poppins">
         <div className="max-w-3xl mx-auto mt-20">
@@ -95,11 +93,7 @@ const SignUp = () => {
               />
               <button
                 type="submit"
-                className={
-                  disableButton
-                    ? "w-full md:w-6/12 bg-red-400 py-3 cursor-no-drop"
-                    : "w-full md:w-6/12 bg-red-500 text-white font-semibold text-sm py-3 hover:shadow-md"
-                }
+                className={disableButton ? 'w-full md:w-6/12 bg-red-400 py-3 cursor-no-drop' : "w-full md:w-6/12 bg-red-500 text-white font-semibold text-sm py-3 hover:shadow-md"}
                 disabled={disableButton ? true : false}
               >
                 {disableButton ? <LoaderSpinner /> : "DAFTAR"}

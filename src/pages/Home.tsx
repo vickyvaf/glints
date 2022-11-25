@@ -10,6 +10,7 @@ const Home = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Glints | Marketplace Lowongan Pekerjaan</title>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <SearchHome />
       <Hero />

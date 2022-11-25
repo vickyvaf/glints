@@ -4,8 +4,14 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      poppins: ['Poppins'],
+      poppins: ["Poppins"],
     },
   },
-  plugins: [require('tw-elements/dist/plugin')],
-}
+  plugins: [
+    require("tw-elements/dist/plugin"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
+  variants: {
+    scrollbar: ["rounded"],
+  },
+};

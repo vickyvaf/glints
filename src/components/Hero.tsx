@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div className="w-full bg-[#F2F8FA] font-poppins overflow-hidden">
-      <h1 className="w-full flex gap-x-1 md:block lg:w-[480px] mx-auto pl-5 text-xl lg:text-4xl font-bold uppercase lg:text-center py-10">
+      <h1 className="w-full flex gap-x-1 md:block md:w-[480px] mx-auto pl-5 text-xl md:text-4xl font-bold uppercase md:text-center py-10">
         <p>Mau Jadi</p> {" "} Software Engineer?
       </h1>
       <hr className="bg-[#FFF240] h-1 w-20 mx-auto rounded-full" />

@@ -19,7 +19,7 @@ const Header = () => {
   }, [Cookies]);
 
   return (
-    <div className="w-full bg-white py-3 px-10 border-b-[1px] border-b-slate-300 font-poppins fixed z-50">
+    <div className="w-full bg-white py-3 px-5 border-b-[1px] border-b-slate-300 font-poppins fixed z-50">
       {/* SideHeader */}
       {showSideHeader ? (
         <div

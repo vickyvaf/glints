@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import FakeCard from "../components/FakeCard";
 import FilterJob from "../components/FilterJob";
@@ -5,6 +7,15 @@ import Footer from "../components/Footer";
 import SearchJob from "../components/SearchJob";
 
 const Jobs = () => {
+  // const fetchData = async () => {
+  //   const result = await axios.get('http://localhost:9000/')
+  //   console.log(result)
+  // }
+
+  // useEffect(() => {
+  //   fetchData()
+  // })
+
   return (
     <>
       <Helmet>
